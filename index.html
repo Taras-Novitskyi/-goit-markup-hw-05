@@ -17,7 +17,7 @@
 				<a class="header__logo logo" href="#" lang="en">Web<span>Studio</span></a>
 				<nav class="header__menu">
 					<ul class="header__list">
-						<li class="header__link">
+						<li class="header__link current-link">
 							<a href="./index.html">Студия</a>
 						</li>
 						<li class="header__link">
@@ -59,7 +59,12 @@
 			<section class="main__hero hero">
 				<div class="hero__container">
 					<h1 class="hero__title main-title" >Эффективные решения для вашего бизнеса</h1>
-					<button class="hero__button button" type="button"> Заказать услугу</button>
+					<button data-modal-open class="hero__button button" type="button"> Заказать услугу</button>
+					<div data-modal class="hero__backdrop is-hidden">
+						<div class="hero__modal">
+							<button data-modal-close type="button" class="hero__close"></button>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -394,6 +399,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="./js/modal.js"></script>
 	</body>
 
 </html>
