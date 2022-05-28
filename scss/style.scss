@@ -11,6 +11,7 @@
 	--color-bg-light2:#F5F4FA;
 	--color-bg-main:#188CE8;
 	--color-svg-icon:#AFB1B8;
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 // ---------------------------------
 
@@ -155,7 +156,7 @@ h1,h2,h3,h4,h5,h6{
 	border-radius: 50%;
 	color: var(--color-svg-icon);
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 
 	&:hover, &:focus{
 		background-color: var(--main-color);
@@ -204,7 +205,7 @@ h1,h2,h3,h4,h5,h6{
 			padding: 0 20px;
 			a{
 				color: var(--color-main-dark);
-				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);	
+				transition: color 250ms var(--timing-function);	
 			}
 			a:hover, a:focus {
 				color: var(--main-color);	
@@ -216,6 +217,7 @@ h1,h2,h3,h4,h5,h6{
 		}
 		.current-link::after {
 			content: "";
+			display: block;
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -249,7 +251,7 @@ h1,h2,h3,h4,h5,h6{
 				display: flex;
 				align-items: center;
 				color: var(--color-second-dark);
-				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				transition: color 250ms var(--timing-function);
 
 				&:hover, &:focus{
 					color: var(--main-color);
@@ -299,7 +301,7 @@ h1,h2,h3,h4,h5,h6{
 		letter-spacing: 0.06em;
 		color: var(--color-main-light);
 
-		transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: background-color 250ms var(--timing-function);
 
 
 			&:hover, &:focus{
@@ -316,7 +318,7 @@ h1,h2,h3,h4,h5,h6{
 		background-color: rgba(0, 0, 0, 0.2);
 		z-index: 20;
 
-		transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: opacity 500ms var(--timing-function);
 	}
 	&__backdrop.is-hidden{
 		// visibility: hidden;
@@ -517,7 +519,7 @@ h1,h2,h3,h4,h5,h6{
 		border-radius: 4px;
 		color: var(--color-svg-icon);
 
-		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 
 		&:hover, &:focus{
 			color: var(--main-color);
@@ -558,7 +560,7 @@ h1,h2,h3,h4,h5,h6{
 				line-height: 1.71;
 				color: rgba(255, 255, 255, 0.6);
 				
-				transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+				transition: color 250ms var(--timing-function);
 							
 			}
 			&:first-child a{
@@ -620,7 +622,7 @@ h1,h2,h3,h4,h5,h6{
 	background-color: var(--color-bg-light2);
 	border-radius: 4px;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 
 	&:hover, &:focus{
 		color: var(--color-main-light);
@@ -635,15 +637,15 @@ h1,h2,h3,h4,h5,h6{
 	&__card{
 		display: block;
 
-		transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+		transition: box-shadow 250ms var(--timing-function); 
 
-		&:hover{
+		&:hover, &:focus{
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 		}
-		&:hover ::before{
+		&:hover ::before, &:focus ::before{
 			transform: translate(0, -100%);
 		}
-		&:hover .element-portfolio__info{
+		&:hover .element-portfolio__info, &:focus .element-portfolio__info{
 			transform: translate(0, -100%);
 		}
 	}
@@ -667,7 +669,7 @@ h1,h2,h3,h4,h5,h6{
 			background-color: var(--main-color);
 			opacity: 0.9;
 
-			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			transition: transform 250ms var(--timing-function);
 		}
 	}
 	&__info{
@@ -682,7 +684,7 @@ h1,h2,h3,h4,h5,h6{
 		padding: 24px;
 		overflow: hidden;
 
-		transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		transition: transform 250ms var(--timing-function);
 
 		p{
 			font-size: 18px;

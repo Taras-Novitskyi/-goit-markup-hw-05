@@ -7,6 +7,7 @@
   --color-bg-light2:#F5F4FA;
   --color-bg-main:#188CE8;
   --color-svg-icon:#AFB1B8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html, body {
@@ -146,8 +147,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 44px;
   border-radius: 50%;
   color: var(--color-svg-icon);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .social-icon:hover, .social-icon:focus {
@@ -220,8 +221,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__link a {
   color: var(--color-main-dark);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .header__link a:hover, .header__link a:focus {
@@ -235,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .current-link::after {
   content: "";
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -270,8 +272,8 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
   color: var(--color-second-dark);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .header .element-contact__link:hover, .header .element-contact__link:focus {
@@ -321,8 +323,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--color-main-light);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .hero__button:hover, .hero__button:focus {
@@ -337,8 +339,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 20;
-  -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 500ms var(--timing-function);
+  transition: opacity 500ms var(--timing-function);
 }
 
 .hero__backdrop.is-hidden {
@@ -517,8 +519,8 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--color-svg-icon);
   border-radius: 4px;
   color: var(--color-svg-icon);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 
 .clients__icon-link:hover, .clients__icon-link:focus {
@@ -562,8 +564,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 
 .footer__link:first-child a {
@@ -621,10 +623,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-main-dark);
   background-color: var(--color-bg-light2);
   border-radius: 4px;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
 
 .buttons:hover, .buttons:focus {
@@ -636,23 +638,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .element-portfolio__card {
   display: block;
-  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
 
-.element-portfolio__card:hover {
+.element-portfolio__card:hover, .element-portfolio__card:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.element-portfolio__card:hover ::before {
+.element-portfolio__card:hover ::before, .element-portfolio__card:focus ::before {
   -webkit-transform: translate(0, -100%);
           transform: translate(0, -100%);
 }
 
-.element-portfolio__card:hover .element-portfolio__info {
+.element-portfolio__card:hover .element-portfolio__info, .element-portfolio__card:focus .element-portfolio__info {
   -webkit-transform: translate(0, -100%);
           transform: translate(0, -100%);
 }
@@ -681,10 +683,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: var(--main-color);
   opacity: 0.9;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .element-portfolio__info {
@@ -701,10 +703,10 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   padding: 24px;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .element-portfolio__info p {
