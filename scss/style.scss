@@ -149,8 +149,9 @@ h1,h2,h3,h4,h5,h6{
 
 // -------------social-icon----------------
 .social-icon{
-	display: inline-block;
-	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
@@ -346,12 +347,19 @@ h1,h2,h3,h4,h5,h6{
 		right: 8px;
 		top: 8px;
 
-		background: var(--color-main-light);
+		background-color: var(--color-main-light);
 		background-image: url("../img/webstudio/hero/close.svg");
 		background-repeat: no-repeat;
 		background-position: center;
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		border-radius: 50%;
+
+		transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+
+		&:hover{
+			background-color: rgb(255, 82, 82);
+			box-shadow: 0 0 3px rgb(106, 104, 104);;
+		}
 	}
 }
 
