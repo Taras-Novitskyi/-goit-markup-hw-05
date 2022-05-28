@@ -318,7 +318,6 @@ h1,h2,h3,h4,h5,h6{
 		background-color: rgba(0, 0, 0, 0.2);
 		z-index: 20;
 		opacity: 1;
-		transform: scale(1);
 
 		transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
 	}
@@ -326,7 +325,9 @@ h1,h2,h3,h4,h5,h6{
 		// visibility: hidden;
 		opacity: 0;
 		pointer-events: none;
-		transform: scale(0.5);
+	}
+	&__backdrop.is-hidden &__modal{
+		transform: translate(-50%, -50%) scale(0.8);
 	}
 	&__modal{
 		position: absolute;
@@ -334,12 +335,13 @@ h1,h2,h3,h4,h5,h6{
 		left: 50%;
 		width: 528px;
 		height: 581px;
-		
 		background: var(--color-main-light);
 		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 		border-radius: 4px;
-		
-		transform: translate(-50%, -50%);
+			
+		transform: translate(-50%, -50%) scale(1);
+
+		transition: transform 250ms var(--timing-function);
 	}
 	&__close{
 		position: absolute;
