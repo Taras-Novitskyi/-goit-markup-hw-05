@@ -645,10 +645,10 @@ h1,h2,h3,h4,h5,h6{
 			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 		}
 		&:hover ::before, &:focus ::before{
-			transform: translate(0, -100%);
+			transform: translate(0);
 		}
 		&:hover .element-portfolio__info, &:focus .element-portfolio__info{
-			transform: translate(0, -100%);
+			transform: translate(0);
 		}
 	}
 	&__img {
@@ -664,12 +664,13 @@ h1,h2,h3,h4,h5,h6{
 			content: "";
 			display: inline-block;
 			position: absolute;
-			top: 100%;
+			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
 			background-color: var(--main-color);
 			opacity: 0.9;
+			transform: translateY(100%);
 
 			transition: transform 250ms var(--timing-function);
 		}
@@ -678,13 +679,13 @@ h1,h2,h3,h4,h5,h6{
 		display: flex;
 		align-items: center;
 		position: absolute;
-		top: 100%;
+		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		// transform: translate(-50%, -50%);
 		padding: 24px;
 		overflow: hidden;
+		transform: translateY(100%);
 
 		transition: transform 250ms var(--timing-function);
 
