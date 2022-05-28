@@ -346,8 +346,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 20;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: opacity 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
   transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
@@ -357,8 +358,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero__backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 .hero__modal {
@@ -387,16 +388,15 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  -webkit-transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
-  transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+  -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: -webkit-box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
 
 .hero__close:hover {
-  background-color: #ff5252;
-  -webkit-box-shadow: 0 0 3px #6a6868;
-          box-shadow: 0 0 3px #6a6868;
+  -webkit-box-shadow: 0 0 2px var(--color-svg-icon);
+          box-shadow: 0 0 2px var(--color-svg-icon);
 }
 
 .principles {
