@@ -19,7 +19,6 @@ body {
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: var(--color-main-dark);
   font-size: 16px;
-  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
@@ -99,10 +98,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
   display: block;
-  font-weight: 700;
+  text-align: center;
   margin-bottom: 50px;
   font-size: 36px;
-  text-align: center;
+  line-height: 1.17;
+  font-weight: 700;
   color: var(--color-main-dark);
 }
 
@@ -205,6 +205,10 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 
+.header__menu a {
+  padding: 33px 0;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,17 +229,18 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--main-color);
 }
 
-.header .current-link a {
+.header .current-link {
+  position: relative;
   color: var(--main-color);
 }
 
-.header .current-link a::after {
+.header .current-link::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
-  -webkit-transform: translate(0, 31px);
-          transform: translate(0, 31px);
   background-color: var(--main-color);
   border-radius: 2px;
 }
@@ -252,6 +257,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__element:not(:last-child) {
   margin-right: 30px;
+}
+
+.header .element-contact a {
+  padding: 33px 0;
 }
 
 .header .element-contact__link {
@@ -329,8 +338,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 20;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero__backdrop.is-hidden {
