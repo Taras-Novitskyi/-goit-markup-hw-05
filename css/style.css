@@ -339,13 +339,19 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 20;
-  -webkit-transition: opacity 500ms var(--timing-function);
-  transition: opacity 500ms var(--timing-function);
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: opacity 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
 
 .hero__backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
 }
 
 .hero__modal {
@@ -354,12 +360,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   width: 528px;
   height: 581px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background: var(--color-main-light);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero__close {
